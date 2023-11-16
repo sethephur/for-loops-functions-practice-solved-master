@@ -7,6 +7,15 @@
 export function reverseArray(array) {
   // Your code goes here...
 
+  let reverseArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const num = array[i];
+    reverseArray = [num, ...reverseArray];
+  }
+
+  return reverseArray;
+
 }
 
 

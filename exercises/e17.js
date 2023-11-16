@@ -8,6 +8,17 @@
 export function doesArrayInclude(array, value) {
   // Your code goes here...
 
+  let isInside = false;
+
+  for (const e in array) {
+    if (array[e] == value) {
+      isInside = true;
+      break;
+    }
+  }
+
+  return isInside;
+
 }
 
 

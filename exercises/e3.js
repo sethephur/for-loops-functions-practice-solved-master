@@ -11,6 +11,10 @@
 export function getAverage(array) {
   // Your code goes here...
 
+  const sum = array.reduce((a, b) => a + b, 0);
+  const avg = (sum / array.length) || 0;
+
+  return avg;
 }
 
 
@@ -24,6 +28,14 @@ export function getAverage(array) {
 export function getStringSum(str) {
   // Your code goes here...
 
+  let sum = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if ((str[i] >= '0') && str[i] <= '9') {
+      sum += (str[i] - '0');
+    }
+  }
+  return sum;
 }
 
 

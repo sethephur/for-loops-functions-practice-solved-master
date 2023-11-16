@@ -8,6 +8,24 @@
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
 
+  let allNames = [[],[]];
+
+  for (const index of array) {
+    const element = index;
+    let includesA = false;
+    for (let i = 0; i < element.length; i++) {
+      if (element[i].toLowerCase() === 'a') {
+        includesA = true;
+        allNames[0].push(index);
+      }
+    }
+    if (!includesA) {
+      allNames[1].push(index);
+    }
+  }
+
+  return allNames;
+  
 }
 
 

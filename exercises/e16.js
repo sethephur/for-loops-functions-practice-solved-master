@@ -8,6 +8,21 @@
 export function flatArrays(array) {
   // Your code goes here...
 
+  const newArr = [];
+
+  for (const e in array) {
+    if (typeof array[e] == 'object') {
+      for (const i in array[e]) {
+        newArr.push(array[e][i]);
+      }
+    } else {
+      newArr.push(array[e]);
+    }
+    console.log(newArr);
+  }
+
+  return newArr;
+
 }
 
 
